@@ -1,75 +1,91 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  ActivityIndicator,
+} from "react-native";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { CategoryType, ProductType } from "@/types/type";
+import { Stack } from "expo-router";
+import Header from "@/components/Header";
+import ProductItem from "@/components/ProductItem";
+import { Colors } from "@/constants/Colors";
+import ProductList from "@/components/ProductList";
+import Categories from "@/components/Categories";
+import FlashSale from "@/components/FlashSale";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+type Props = {};
 
-export default function HomeScreen() {
+const HomeScreen = (props: Props) => {
+  const [products, setProducts] = useState<ProductType[]>([]);
+  const [saleProducts, setsaleProducts] = useState<ProductType[]>([]);
+  const [categories, setCategories] = useState<CategoryType[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    getProducts();
+    getCategories();
+    getSaleProducts();
+  }, []);
+
+  const getProducts = async () => {
+    const URL = "http://localhost:8000/products";
+    const response = await axios.get(URL);
+
+    // console.log(response.data);
+    setProducts(response.data);
+    setIsLoading(false);
+  };
+
+  const getCategories = async () => {
+    const URL = "http://localhost:8000/categories";
+    const response = await axios.get(URL);
+
+    console.log(response.data);
+    setCategories(response.data);
+    setIsLoading(false);
+  };
+
+  const getSaleProducts = async () => {
+    const URL = "http://localhost:8000/saleProducts";
+    const response = await axios.get(URL);
+
+    // console.log(response.data);
+    setsaleProducts(response.data);
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return (
+      <View>
+        <ActivityIndicator size={"large"} />
+      </View>
+    );
+  }
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <>
+      <Stack.Screen options={{ headerShown: true, header: () => <Header /> }} />
+      <ScrollView>
+        <Categories categories={categories} />
+        <FlashSale products={saleProducts} />
+        <View style={{ marginHorizontal: 20, marginBottom: 10 }}>
+          <Image
+            source={require("@/assets/images/sale-banner.jpg")}
+            style={{ width: "100%", height: 150, borderRadius: 15 }}
+          />
+        </View>
+        <ProductList products={products} flatlist={false} />
+      </ScrollView>
+    </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+export default HomeScreen;
+
+const styles = StyleSheet.create({});
