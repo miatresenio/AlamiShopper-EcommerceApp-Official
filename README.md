@@ -53,9 +53,15 @@ Developed by Mia Myca Tresenio
 
 ## Screenshots  
 
-![Home](./assets/images/home.png)  
-![Products](./assets/images/products.png)  
-![Checkout](./assets/images/checkout.png)  
+![App_Screenshot](./assets/images/intro.png)  
+![SignIn](./assets/images/signin.png)  
+![SignUp](./assets/images/signup.png)  
+![Home1](./assets/images/home1.png)  
+![Home2](./assets/images/home2.png)  
+![Explore](./assets/images/explore.png)  
+![Notifications](./assets/images/notifications.png)  
+![Cart](./assets/images/cart.png)  
+![Profile](./assets/images/profile.png)  
 
 
 
