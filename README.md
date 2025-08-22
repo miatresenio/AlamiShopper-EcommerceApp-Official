@@ -48,7 +48,6 @@ Developer:
 Developed by Mia Myca Tresenio
 
 
-## Screenshots ![App Screenshot](./assets/images/home.png) 
 
 
 ## Screenshots  
