@@ -19,13 +19,13 @@ This project focuses on providing a local marketplace exclusively for Alaminos C
    git clone https://github.com/treseniomia/alamishopper.git
 
 
-## Navigate to the project folder:
+ Navigate to the project folder:
 cd EcommerceApp
 
-## Install dependencies:
+ Install dependencies:
 npm install
 
-## Run the app:
+ Run the app:
 npx expo start
 
 
