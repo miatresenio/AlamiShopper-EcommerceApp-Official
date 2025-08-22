@@ -19,23 +19,23 @@ This project focuses on providing a local marketplace exclusively for Alaminos C
    git clone https://github.com/treseniomia/alamishopper.git
 
 
-Navigate to the project folder:
+## Navigate to the project folder:
 cd EcommerceApp
 
-Install dependencies:
+## Install dependencies:
 npm install
 
-Run the app:
+## Run the app:
 npx expo start
 
 
-Target Users
+## Target Users
 Sellers → Small and medium entrepreneurs in Alaminos City.
 Buyers → Residents looking for a convenient and local shopping experience.
 
 
 
-Roadmap
+## Roadmap
  User Authentication (login/register)
  Seller Dashboard
  Product Listings
@@ -44,7 +44,7 @@ Roadmap
  Admin Panel (app/web)
 
 
-Developer:
+## Developer:
 Developed by Mia Myca Tresenio
 
 
