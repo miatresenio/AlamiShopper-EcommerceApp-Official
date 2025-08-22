@@ -1,24 +1,26 @@
-🛍️ AlamiShopper
-AlamiShopper is a community-based online shopping mobile application built with React Native (Expo). It is designed exclusively for Alaminos City, Pangasinan, allowing local sellers to post and sell their products while local buyers can purchase conveniently within the city.
+# AlamiShopper  
+
+A community-based online shopping mobile app built with React Native and Expo.  
+This project focuses on providing a local marketplace exclusively for Alaminos City, Pangasinan, where sellers can post products and buyers can shop conveniently within the city.  
 
 
-Features
-Local Sellers – post products such as clothes, food, accessories, and more.
-Local Buyers – browse and purchase products quickly since transactions happen within Alaminos.
-Payment Options – Cash on Delivery (COD), GCash, or meet-up.
-Delivery System – simple and efficient delivery focused within the community.
-Community Marketplace – like a virtual mall exclusively for Alaminos residents.
+## Features  
+- Local sellers can post products (clothes, food, accessories, etc.)  
+- Local buyers can purchase quickly within Alaminos City  
+- Payment options: Cash on Delivery (COD), GCash, or meet-up  
+- Simple delivery system within the community  
+- Community-based online marketplace – like a virtual mall for Alaminos  
 
 
-Tech Stack
-Frontend: React Native (Expo)
-Backend: (to be added: Firebase / Node.js / Laravel API, depende sa plan)
-Database: Firebase Realtime DB / MySQL (future expansion)
+## Installation  
+1. Clone the repository:  
+
+   ```bash
+   git clone https://github.com/treseniomia/alamishopper.git
 
 
-Installation
-Clone the repository: git clone https://github.com/yourusername/alamishopper.git
-cd alamishopper
+Navigate to the project folder:
+cd EcommerceApp
 
 Install dependencies:
 npm install
@@ -33,7 +35,6 @@ Buyers → Residents looking for a convenient and local shopping experience.
 
 
 
-
 Roadmap
  User Authentication (login/register)
  Seller Dashboard
@@ -43,10 +44,19 @@ Roadmap
  Admin Panel (app/web)
 
 
-
-
-👩‍💻 Developer
+Developer:
 Developed by Mia Myca Tresenio
 
 
-📍 Alaminos City, Pangasinan
+## Screenshots ![App Screenshot](./assets/images/home.png) 
+
+
+## Screenshots  
+
+![Home](./assets/images/home.png)  
+![Products](./assets/images/products.png)  
+![Checkout](./assets/images/checkout.png)  
+
+
+
+## License This project is licensed under the [MIT License](./LICENSE).
