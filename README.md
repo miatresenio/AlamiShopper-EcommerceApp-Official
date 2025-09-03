@@ -26,6 +26,7 @@ cd EcommerceApp
 npm install
 
  Run the app:
+json-server —watch data/db.json
 npx expo start
 
 
