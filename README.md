@@ -31,8 +31,8 @@ npx expo start
 
 
 ## Target Users
-Sellers → Small and medium entrepreneurs in Alaminos City.
-Buyers → Residents looking for a convenient and local shopping experience.
+- Sellers → Small and medium entrepreneurs in Alaminos City.     
+- Buyers → Residents looking for a convenient and local shopping experience.
 
 
 
@@ -42,7 +42,7 @@ Buyers → Residents looking for a convenient and local shopping experience.
  Product Listings
  Order & Delivery Tracking
  Payment Integration (GCash, PayMaya, COD)
- Admin Panel (app/web)
+ Admin Panel (web)
 
 
 ## Developer:
