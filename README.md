@@ -46,7 +46,7 @@ npx expo start
 
 
 ## Developer:
-Developed by Mia Myca Tresenio
+Developed by Mia Myca N. Tresenio
 
 
 
