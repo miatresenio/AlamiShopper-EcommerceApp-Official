@@ -44,6 +44,9 @@ npx expo start
  Payment Integration (GCash, PayMaya, COD)
  Admin Panel (web)
 
+ ## Future
+ Need to add backend
+
 
 ## Developer:
 Developed by Mia Myca N. Tresenio
