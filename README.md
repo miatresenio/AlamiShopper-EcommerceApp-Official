@@ -9,7 +9,8 @@ This project focuses on providing a local marketplace exclusively for Alaminos C
 - Local buyers can purchase quickly within Alaminos City  
 - Payment options: Cash on Delivery (COD), GCash, or meet-up  
 - Simple delivery system within the community  
-- Community-based online marketplace – like a virtual mall for Alaminos  
+- Community-based online marketplace – like a virtual mall for Alaminos
+- NEED BACKEND
 
 
 ## Installation  
