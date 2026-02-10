@@ -1,6 +1,6 @@
 # AlamiShopper  
 
-A community-based online shopping mobile app built with React Native and Expo.
+A community-based online shopping mobile app.
 This project focuses on providing a local marketplace exclusively for Alaminos City, Pangasinan. Where sellers can post products and buyers can shop conveniently within the City.  
 
 
@@ -36,7 +36,6 @@ npx expo start
 - Buyers → Residents looking for a convenient and local shopping experience.
 
 
-
 ## Roadmap
  User Authentication (login/register)
  Seller Dashboard
@@ -53,8 +52,6 @@ npx expo start
 Developed by Mia Tresenio
 
 
-
-
 ## Screenshots  
 
 ![App_Screenshot](./assets/images/intro.png)  
@@ -68,7 +65,3 @@ Developed by Mia Tresenio
 ![Profile](./assets/images/profile.png)  
 
 
-
-## License
-
-This project is licensed under the [MIT License](./LICENSE).
